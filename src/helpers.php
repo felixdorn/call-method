@@ -12,7 +12,7 @@ if (!function_exists('call')) {
             throw new BadMethodCallException(sprintf('Call to undefined method %s::%s()', get_class($object), $method));
         }
 
-        $reflection = new ReflectionClass($object);
+        $reflection      = new ReflectionClass($object);
         $reflectedMethod = $reflection->getMethod($method);
         $reflectedMethod->setAccessible(true);
 
